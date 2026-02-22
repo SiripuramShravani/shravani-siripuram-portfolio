@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function () {
     initSkillBars();
     initTypingAnimation();
     initBackToTop();
-    initContactForm();
 });
 
 // ===== NAVIGATION =====
@@ -142,7 +141,7 @@ function initCounters() {
     const startDate = new Date('2023-08-01');
     const currentDate = new Date();
     const yearsOfExperience = (currentDate - startDate) / (1000 * 60 * 60 * 24 * 365.25);
-    
+
     // Update the experience counter's data-target
     const experienceCounter = document.getElementById('experience-counter');
     if (experienceCounter) {
@@ -150,7 +149,7 @@ function initCounters() {
     }
 
     const observerOptions = {
-        threshold: 0.5
+        threshold: 0
     };
 
     const counterObserver = new IntersectionObserver((entries) => {
@@ -281,72 +280,6 @@ function initBackToTop() {
     });
 }
 
-// ===== CONTACT FORM =====
-function initContactForm() {
-    const form = document.getElementById('contact-form');
-    const formMessage = document.querySelector('.form-message');
-
-    form.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        // Get form values
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const subject = document.getElementById('subject').value.trim();
-        const message = document.getElementById('message').value.trim();
-
-        // Validate
-        if (!name || !email || !subject || !message) {
-            showMessage('Please fill in all fields.', 'error');
-            return;
-        }
-
-        if (!validateEmail(email)) {
-            showMessage('Please enter a valid email address.', 'error');
-            return;
-        }
-
-        // In a real implementation, you would send this data to a backend
-        // For now, we'll just show a success message
-        showMessage('Thank you for your message! I\'ll respond within 24 hours.', 'success');
-
-        // Reset form
-        form.reset();
-
-        // You can integrate with services like EmailJS, Formspree, or your own backend
-        // Example with EmailJS:
-        // emailjs.send('service_id', 'template_id', {
-        //     name: name,
-        //     email: email,
-        //     subject: subject,
-        //     message: message
-        // });
-    });
-
-    function showMessage(msg, type) {
-        formMessage.textContent = msg;
-        formMessage.className = `form-message ${type}`;
-        formMessage.style.display = 'block';
-
-        setTimeout(() => {
-            formMessage.style.display = 'none';
-        }, 5000);
-    }
-
-    function validateEmail(email) {
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return re.test(email);
-    }
-
-    // Floating label effect (already handled by CSS :focus and :not(:placeholder-shown))
-    const inputs = form.querySelectorAll('input, textarea');
-    inputs.forEach(input => {
-        // Add placeholder attribute to make CSS selector work
-        input.setAttribute('placeholder', ' ');
-    });
-}
-
-// ===== ADDITIONAL ENHANCEMENTS =====
 
 // Parallax effect for hero background removed - caused layout overlap with subsequent sections
 
