@@ -23,7 +23,35 @@ document.addEventListener('DOMContentLoaded', function () {
     initSkillBars();
     initTypingAnimation();
     initBackToTop();
+    initExpandableCards();
 });
+
+// ===== EXPANDABLE EXPERIENCE CARDS =====
+function initExpandableCards() {
+    document.querySelectorAll('.expand-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const targetId = btn.getAttribute('data-target');
+            const list = document.getElementById(targetId);
+            if (!list) return;
+
+            const extras = list.querySelectorAll('.extra-item');
+            const isExpanded = btn.dataset.expanded === 'true';
+
+            extras.forEach(el => {
+                if (isExpanded) {
+                    el.classList.add('hidden');
+                } else {
+                    el.classList.remove('hidden');
+                }
+            });
+
+            btn.dataset.expanded = (!isExpanded).toString();
+            btn.textContent = isExpanded ? 'View Details \u25be' : 'Collapse \u25b4';
+        });
+    });
+}
+
+
 
 // ===== NAVIGATION =====
 function initNavigation() {
@@ -283,17 +311,6 @@ function initBackToTop() {
 
 // Parallax effect for hero background removed - caused layout overlap with subsequent sections
 
-// Add smooth hover effect to project cards
-const projectCards = document.querySelectorAll('.project-card');
-projectCards.forEach(card => {
-    card.addEventListener('mouseenter', function () {
-        this.style.transform = 'translateY(-10px) rotate(1deg)';
-    });
-
-    card.addEventListener('mouseleave', function () {
-        this.style.transform = 'translateY(0) rotate(0)';
-    });
-});
 
 // Console message for recruiters
 console.log('%c👋 Hello Recruiter!', 'color: #64FFDA; font-size: 24px; font-weight: bold;');
