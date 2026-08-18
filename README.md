@@ -1,16 +1,37 @@
 # 🚀 Shravani Siripuram - Portfolio Website
 
-A stunning, futuristic portfolio website showcasing the work of Shravani Siripuram - SAP BTP CAPM Developer & AI Engineer.
+A clean, modern, professional portfolio website showcasing the work of Shravani Siripuram - SAP Consultant & AI Engineer.
+
+## ✏️ Editing Content — content.md
+
+**All page content lives in [`content.md`](content.md).** You never need to touch `index.html`, `styles.css`, or
+`script.js` to update your bio, experience, projects, skills, education, awards, or contact details — just edit
+`content.md` and reload the page. `script.js` fetches it, parses it, and renders every section automatically.
+
+The file is organized into `# SECTION` blocks (SITE, HERO, ACHIEVEMENTS, ABOUT, SKILLS, EXPERIENCE, PROJECTS,
+LINKEDIN, EDUCATION, AWARDS, CONTACT). A few conventions to know when editing:
+
+- `Key: value` lines set simple fields (e.g. `Email: you@example.com`).
+- `## Heading | extra | info` starts a new entry inside a section (an experience role, a project, a skill category,
+  an award, etc.). The parts after `|` vary by section — follow the existing examples for that section.
+- Lines starting with `- ` are bullet points (responsibilities, contributions).
+- In the EXPERIENCE section, a lone `---` line marks where the bullets below it become the collapsed "View Details"
+  items instead of always-visible ones.
+- `Tech: A, B, C` (comma-separated) becomes the tech-tag pills on experience/project cards.
+- `**bold text**` inside paragraphs/bullets renders as bold.
+
+Because content is fetched with JavaScript, **the site must be served over http(s)**, not opened directly as a
+`file://` path — see [Local Testing](#-local-testing) below. If `content.md` fails to load, the page shows a banner
+explaining this. GitHub Pages (the deployment target here) serves it correctly out of the box.
 
 ## ✨ Features
 
 ### Design & Aesthetics
-- **Futuristic Design**: Ultra-modern interface with glassmorphism effects
-- **Professional Color Scheme**: Deep Navy Blue (#0A192F) + Cyan Accent (#64FFDA)
-- **Smooth Animations**: Fade-in, slide-in, float, and glow effects
-- **Parallax Scrolling**: Subtle depth effects throughout
-- **Gradient Backgrounds**: Dynamic animated gradients
-- **Glassmorphism**: Frosted glass effect on cards and navigation
+- **Professional, Light Theme**: Clean slate/white surfaces with a confident blue + teal accent system
+- **Content-Driven**: Every section renders from `content.md` — no code edits needed for content changes
+- **Smooth Animations**: Fade-in, reveal-on-scroll, count-up, and hover effects (respects reduced-motion)
+- **Consistent Card System**: Skills, experience, projects, awards, and LinkedIn cards all share one visual language
+- **Subtle Gradient Accents**: Soft radial gradients and gradient text for a modern, professional feel
 
 ### Sections
 1. **Navigation Bar** - Fixed top navigation with blur effect
@@ -57,113 +78,60 @@ A stunning, futuristic portfolio website showcasing the work of Shravani Siripur
 
 ```
 portfolio/
-├── index.html          # Main HTML structure
+├── index.html          # Container skeleton (rendered by content.md via script.js)
+├── content.md           # ✏️ ALL page content — edit this, not the code
 ├── styles.css          # Complete CSS styling
-├── script.js           # JavaScript functionality
+├── script.js           # content.md parser/renderer + interactive features
 ├── README.md           # Documentation (this file)
-├── photo1.jpg          # Hero section profile photo (REPLACE)
-├── photo2.jpg          # About section workspace photo (REPLACE)
-├── photo3.jpg          # Contact section photo (REPLACE)
-├── linkedin-post-1.jpg # Employee of the Month post (REPLACE)
-├── linkedin-post-2.jpg # Technical achievement post (REPLACE)
-└── linkedin-post-3.jpg # Certification post (REPLACE)
+└── assets/             # Profile & work photos
 ```
 
 ## 🎨 Color Palette
 
 ```css
-Primary Navy:    #0A192F  (Background)
-Primary Cyan:    #64FFDA  (Accents, Links, CTA)
-Secondary Blue:  #1a2332  (Cards, Sections)
-LinkedIn Blue:   #0077B5  (LinkedIn elements)
-Text White:      #E6F1FF  (Headings)
-Text Gray:       #8892B0  (Body text)
-Text Light:      #CCD6F6  (Light text)
-Accent Green:    #28a745  (Success, GitHub)
-Accent Gold:     #FFD700  (Awards, Badges)
+Primary Blue:    #2563EB  (Brand, links, CTAs)
+Primary Dark:    #1D4ED8  (Hover states)
+Accent Teal:     #0D9488  (Secondary accent, gradients)
+Deep Slate:      #0B1220  (Footer / CTA section background)
+LinkedIn Blue:   #0A66C2  (LinkedIn elements)
+Heading Text:    #0F172A  (Headings)
+Body Text:       #475569  (Body copy)
+Muted Text:      #94A3B8  (Meta / labels)
+Surface:         #FFFFFF  (Cards)
+Page Background: #F8FAFC  (Base background)
+Amber Gold:      #D97706  (Awards, "Ongoing" badge)
 ```
 
-## 🖼️ Image Replacement Guide
+## 🖼️ Updating Photos
 
-### STEP 1: Prepare Your Photos
+Replace the files in `assets/` with new photos, keeping the same filenames (or update the `src` paths in the
+Hero/About `<img>` tags in `index.html` if you rename them):
 
-1. **photo1.jpg** - Hero Section Profile Photo
-   - Recommended size: 600x600px (will be cropped to circle)
-   - Professional headshot with clean background
-   - High resolution, well-lit
-
-2. **photo2.jpg** - About Section Workspace Photo
-   - Recommended size: 800x1000px
-   - Professional setting (at desk, in office, presenting)
-   - Landscape or portrait orientation
-
-3. **photo3.jpg** - Contact Section Photo
-   - Recommended size: 240x240px (will be cropped to circle)
-   - Can be same as photo1 or a different casual professional photo
-
-### STEP 2: LinkedIn Post Screenshots
-
-1. **linkedin-post-1.jpg** - Employee of the Month
-   - Take screenshot of your LinkedIn post
-   - Crop to show just the post content
-   - Recommended size: 800x600px
-
-2. **linkedin-post-2.jpg** - Technical Achievement
-   - Screenshot of post about 95% processing time reduction
-   - Same cropping guidelines
-
-3. **linkedin-post-3.jpg** - Certification
-   - Screenshot of LangGraph certification post
-   - Same cropping guidelines
-
-### STEP 3: Replace Placeholder Files
-
-Simply replace the placeholder .jpg files in the root directory with your actual photos using the same filenames.
+- `assets/shravani-pic.jpeg` — Hero section profile photo
+- `assets/shravani-work.jpeg` — About section workspace photo
 
 ## 🔗 Update Links & Information
 
-### Resume Link
-Find this line in `index.html` (appears twice):
-```html
-<a href="#" class="btn btn-primary">
-```
-Replace `#` with your Google Drive resume link:
-```html
-<a href="YOUR_GOOGLE_DRIVE_LINK_HERE" class="btn btn-primary">
-```
+All of these live in the `# SITE` block at the top of **[`content.md`](content.md)** — edit the values there, no
+HTML required:
 
-### LinkedIn Profile
-Find all instances of LinkedIn links:
-```html
-<a href="#" target="_blank" aria-label="LinkedIn Profile">
 ```
-Replace with:
-```html
-<a href="https://www.linkedin.com/in/YOUR-PROFILE" target="_blank">
-```
-
-### GitHub Profile
-Find GitHub links and replace:
-```html
-<a href="#" target="_blank" aria-label="GitHub Profile">
-```
-Replace with:
-```html
-<a href="https://github.com/YOUR-USERNAME" target="_blank">
+Resume: https://drive.google.com/...
+Email: you@example.com
+LinkedIn: https://www.linkedin.com/in/your-profile
+GitHub: https://github.com/your-username
+Location: City, State, Country
 ```
 
 ### LinkedIn Post URLs
-In the LinkedIn section, find:
-```html
-<a href="#" class="btn-linkedin" target="_blank">View on LinkedIn</a>
-```
-Replace each `#` with the actual LinkedIn post URL.
+Each post lives under `# LINKEDIN` in `content.md` as its own `## Title | badgeType | badgeLabel` entry with a
+`Link:` line — update that line with the real post URL.
 
-**How to get LinkedIn post URLs:**
+**How to get a LinkedIn post URL:**
 1. Go to your LinkedIn post
 2. Click the three dots (⋯) on the post
 3. Click "Copy link to post"
-4. Paste the URL in the href attribute
+4. Paste it as the `Link:` value for that entry in `content.md`
 
 ## 🚀 Deployment
 
@@ -238,36 +206,14 @@ npx http-server
    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR-ID"></script>
    ```
 
-## 📧 Contact Form Integration
-
-The form currently shows a success message. To make it functional:
-
-### Option 1: Formspree (Easiest)
-1. Sign up at formspree.io
-2. Update form action:
-   ```html
-   <form action="https://formspree.io/f/YOUR-FORM-ID" method="POST">
-   ```
-
-### Option 2: EmailJS
-1. Sign up at emailjs.com
-2. Add EmailJS SDK before `</body>`:
-   ```html
-   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-   ```
-3. Initialize in `script.js`
-
-### Option 3: Backend Integration
-Connect to your own backend API for form submissions.
-
 ## 🛠️ Customization Guide
 
 ### Change Colors
-Edit CSS variables in `styles.css`:
+Edit the design tokens at the top of `styles.css`:
 ```css
 :root {
-    --primary-navy: #YOUR_COLOR;
-    --primary-cyan: #YOUR_COLOR;
+    --primary: #YOUR_COLOR;
+    --accent: #YOUR_COLOR;
     /* etc. */
 }
 ```
@@ -300,30 +246,27 @@ body {
 
 ## 🐛 Common Issues & Fixes
 
+**Issue**: Page looks empty / shows a red "content failed to load" banner
+- **Fix**: You opened `index.html` directly as a `file://` path. Serve it via a local server (see Local Testing
+  above) or view the deployed GitHub Pages URL — `fetch('content.md')` requires http(s).
+
 **Issue**: Animations not working
 - **Fix**: Make sure JavaScript is enabled in browser
 
 **Issue**: Images not showing
-- **Fix**: Check file paths are correct and images are in root directory
+- **Fix**: Check file paths are correct and images are in the `assets/` directory
 
 **Issue**: Mobile menu not closing
 - **Fix**: Clear browser cache and reload
 
-**Issue**: Form not submitting
-- **Fix**: Integrate with Formspree or EmailJS (see above)
-
 ## 📝 Checklist Before Going Live
 
-- [ ] Replace all 6 placeholder images
-- [ ] Update resume link (Google Drive)
-- [ ] Update LinkedIn profile URL
-- [ ] Update GitHub profile URL
-- [ ] Update LinkedIn post URLs
+- [ ] Review every section in `content.md` for accuracy
+- [ ] Update resume link, email, LinkedIn, GitHub in the `# SITE` block
+- [ ] Update LinkedIn post URLs under `# LINKEDIN`
 - [ ] Test on mobile device
 - [ ] Test in different browsers
-- [ ] Compress all images
-- [ ] Update meta tags for SEO
-- [ ] Set up contact form integration
+- [ ] Compress photos in `assets/`
 - [ ] Add Google Analytics (optional)
 - [ ] Test all links work
 - [ ] Proofread all content
@@ -336,27 +279,24 @@ This portfolio template is created for Shravani Siripuram. Feel free to customiz
 
 - **Design & Development**: Custom built with HTML, CSS, JavaScript
 - **Icons**: Font Awesome
-- **Fonts**: Google Fonts (Inter)
-- **Inspiration**: Modern futuristic web design trends
+- **Fonts**: Google Fonts (Inter, Sora)
+- **Content**: Driven entirely by [`content.md`](content.md)
 
 ---
 
 **Built with ❤️ for Shravani Siripuram**
 
-*Last Updated: December 2025*
-
 ## 📞 Support
 
 If you need help customizing this portfolio:
 - Email: ssiripuram46@gmail.com
-- LinkedIn: [Update with your profile link]
 
 ---
 
 ### Quick Start Summary
 
-1. ✅ Files created: index.html, styles.css, script.js
-2. 📸 Add 6 images: photo1.jpg, photo2.jpg, photo3.jpg, linkedin-post-1/2/3.jpg
-3. 🔗 Update all `#` links with real URLs
-4. 🚀 Deploy to GitHub Pages, Netlify, or Vercel
-5. 🎉 Share your stunning portfolio!
+1. ✅ Files: `index.html` (skeleton), `styles.css` (design), `script.js` (loads + renders `content.md`)
+2. ✏️ Edit `content.md` for any content change — bio, experience, projects, skills, links, everything
+3. 📸 Drop new photos into `assets/` to replace the hero/about images
+4. 🚀 Push to `main` — GitHub Actions deploys to GitHub Pages automatically
+5. 🎉 Share your portfolio!
