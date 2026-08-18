@@ -285,6 +285,7 @@ function renderAll(data) {
         'location-text': data.site.Location,
         'brand-name': data.site.Name,
         'brand-title': data.site.BrandTitle,
+        'brand-initials': getInitials(data.site.Name),
         'response-time-text': data.contact.ResponseTime,
         'availability-text': data.contact.Availability
     });
@@ -317,6 +318,22 @@ function renderHero(hero) {
     setText('hero-title', hero.Title);
     setText('hero-subtitle', hero.Subtitle);
     setText('hero-tagline', hero.Tagline);
+
+    const badgesEl = document.getElementById('hero-badges');
+    if (badgesEl && hero.Badges) {
+        const badges = hero.Badges.split(',').map(b => b.trim()).filter(Boolean);
+        badgesEl.innerHTML = badges.map(b => `<span class="hero-badge">${escapeHtml(b)}</span>`).join('');
+    }
+
+    const floatingEl = document.getElementById('hero-floating-badge');
+    if (floatingEl && hero.FloatingBadge) {
+        floatingEl.innerHTML = `<i class="fas fa-star"></i><span>${escapeHtml(hero.FloatingBadge)}</span>`;
+    }
+}
+
+function getInitials(name) {
+    if (!name) return '';
+    return name.trim().split(/\s+/).slice(0, 2).map(w => w[0].toUpperCase()).join('');
 }
 
 function renderAchievements(list) {
@@ -412,7 +429,9 @@ function renderProjects(list) {
     const container = document.getElementById('projects-grid');
     if (!container) return;
     container.innerHTML = list.map(proj => {
-        const badge = proj.status === 'ongoing' ? `<div class="proj-status-badge ongoing">&#x25CF; Ongoing</div>` : '';
+        const badge = proj.status === 'ongoing'
+            ? `<div class="proj-status-badge ongoing">&#x25CF; Ongoing</div>`
+            : (proj.meta.Length ? `<div class="proj-status-badge completed"><i class="fas fa-check"></i> ${escapeHtml(proj.meta.Length)}</div>` : '');
         const tech = (proj.meta.tech || []).map(t => `<span class="tech-tag">${escapeHtml(t)}</span>`).join('');
         const bullets = proj.bullets.map(b => `<li>${mdInline(b)}</li>`).join('');
         return `
