@@ -13,7 +13,9 @@ Location: Hyderabad, Telangana, India
 Greeting: Hi, I'm Shravani Siripuram 👋
 Title: SAP Consultant
 Subtitle: AI Engineer | Full Stack Developer
-Tagline: Building intelligent enterprise solutions with SAP BTP, SAP AI Core, Generative AI & Multi-Agent Systems
+Tagline: Specializing in SAP Business AI — building intelligent enterprise solutions with SAP BTP, Generative AI & Multi-Agent Systems
+Badges: SAP Business AI, Generative AI, Enterprise Automation
+FloatingBadge: 3+ Years in SAP & AI
 
 # ACHIEVEMENTS
 icon: fa-calendar-check | target: auto | suffix: + | label: Years of Experience
@@ -32,15 +34,16 @@ Currently leading the **Document Extraction microservice** for an AI-powered Sal
 Proficient in CI/CD pipelines using GitHub Actions and DevOps practices across **AWS, Azure, and Jenkins** — passionate about combining SAP technologies with Generative AI to solve real-world business challenges at scale.
 
 ## Highlights
+icon: fa-cloud | text: SAP Business AI Specialist
 icon: fa-robot | text: Generative AI & LLM Integration
 icon: fa-sitemap | text: SAP BTP & CAPM Architecture
 icon: fa-file-invoice | text: Intelligent Document Processing
-icon: fa-cloud | text: SAP AI Core & Business AI
 icon: fa-trophy | text: Employee of the Month
 icon: fa-bolt | text: 90% Efficiency Gains via AI
 
 # SKILLS
 ## SAP Technologies | icon: fa-cloud
+SAP Business AI: 93
 SAP BTP: 95
 SAP CAPM: 92
 SAP AI Core & AI Launchpad: 88
@@ -81,28 +84,41 @@ Production Deployment & Monitoring: 88
 ## Databases | icon: fa-database
 PostgreSQL: 90
 SAP HANA Cloud: 90
+SAP S/4HANA: 88
 MongoDB: 86
 MySQL: 84
 Schema Design & Optimization: 85
 
 # EXPERIENCE
 ## Consultant | YASH Technologies | current
-Duration: Aug 2025 – Present
+Duration: Jul 2026 – Present
 Location: Hyderabad, India
-- Delivering enterprise-grade SAP BTP CAPM applications and AI-driven automation solutions for enterprise clients
-- Owning the Document Extraction microservice for an AI-powered Sales Order Automation platform built on SAP BTP
-- Designing domain models, services, and OData APIs using CDS
-- Integrating SAP AI Core, Prompt Engineering, and multiple LLMs (OpenAI GPT, Claude, Gemini) for high-accuracy document extraction
+- Promoted to Consultant, leading the Document Extraction microservice for the AI-powered Sales Order Automation Platform on SAP BTP
+- Driving SAP Business AI initiatives, architecting SAP AI Core-driven document intelligence pipelines across the CAPM microservices landscape
+- Directing end-to-end delivery of enterprise CAPM applications and AI automation solutions for enterprise clients
+- Applying advanced Prompt Engineering and multi-LLM orchestration (OpenAI GPT, Claude, Gemini) to maximize extraction accuracy
 ---
-- Building AI-based email classification and document validation pipelines using SAP AI Core
 - Automating Sales Order creation in SAP S/4HANA via REST APIs, eliminating manual data entry
-- Deploying and managing microservices on SAP BTP Cloud Foundry
-- Working with SAP HANA Cloud and PostgreSQL databases
-- Integrating SAP UI5 / SAP Fiori front-end applications with CAP services
-- Configuring BTP Destinations to connect external and SAP systems
 - Configuring SAP AI Launchpad and SAP Build Process Automation (BPA) workflows
 - Designing scalable, distributed microservices architectures for cloud-native SAP applications
-Tech: SAP BTP, SAP CAPM, SAP AI Core, SAP AI Launchpad, SAP Build, SAP BPA, Node.js, CDS, SAP S/4HANA, SAP HANA Cloud, PostgreSQL, Cloud Foundry, OpenAI GPT, Claude, Gemini, Microservices
+- Collaborating with cross-functional teams to shape solution architecture for SAP Business AI initiatives
+Tech: SAP Business AI, SAP BTP, SAP CAPM, SAP AI Core, SAP AI Launchpad, SAP Build, SAP BPA, SAP S/4HANA, PostgreSQL, Cloud Foundry, OpenAI GPT, Claude, Gemini, Microservices
+
+## Associate Consultant | YASH Technologies
+Badge: 11 months
+Duration: Aug 2025 – Jun 2026
+Location: Hyderabad, India
+- Delivered enterprise-grade SAP BTP CAPM applications and AI-driven automation solutions for enterprise clients
+- Owned the Document Extraction microservice for the AI-powered Sales Order Automation platform built on SAP BTP
+- Designed domain models, services, and OData APIs using CDS
+- Integrated SAP AI Core, Prompt Engineering, and multiple LLMs (OpenAI GPT, Claude, Gemini) for high-accuracy document extraction
+---
+- Built AI-based email classification and document validation pipelines using SAP AI Core
+- Deployed and managed microservices on SAP BTP Cloud Foundry
+- Worked with SAP HANA Cloud and PostgreSQL databases
+- Integrated SAP UI5 / SAP Fiori front-end applications with CAP services
+- Configured BTP Destinations to connect external and SAP systems
+Tech: SAP BTP, SAP CAPM, SAP AI Core, Node.js, CDS, SAP S/4HANA, SAP HANA Cloud, PostgreSQL, Cloud Foundry, OpenAI GPT, Claude, Gemini, Microservices
 
 ## Software Engineer | Innovon.AI Technologies
 Badge: 2 years
@@ -133,21 +149,23 @@ Contributions:
 Tech: SAP BTP, SAP CAPM, SAP AI Core, SAP Build, PostgreSQL, SAP S/4HANA, Cloud Foundry, OpenAI GPT, Claude, Gemini, REST APIs, Microservices
 
 ## SAP BTP CAPM & AI Integration | YASH Technologies
-Duration: Aug 2025 – Present
-Description: Developing enterprise-grade CAPM applications on SAP BTP integrated with SAP AI services to enable intelligent business automation and AI-driven enterprise solutions.
+Duration: Aug 2025 – Feb 2026
+Length: 7 months
+Description: Developed enterprise-grade CAPM applications on SAP BTP integrated with SAP AI services to enable intelligent business automation and AI-driven enterprise solutions.
 Contributions:
-- Developing scalable backend services using SAP CAPM with Node.js
-- Designing domain models and service layers using CDS
-- Implementing OData services for enterprise data exposure
-- Deploying and managing applications on SAP BTP Cloud Foundry
-- Integrating SAP AI Core for AI-driven enterprise workflows
-- Implementing SAP Document Extraction service for intelligent document processing
-- Building AI-powered automation prototypes and proof-of-concepts
-- Integrating SAP services with enterprise systems using BTP Destinations
+- Developed scalable backend services using SAP CAPM with Node.js
+- Designed domain models and service layers using CDS
+- Implemented OData services for enterprise data exposure
+- Deployed and managed applications on SAP BTP Cloud Foundry
+- Integrated SAP AI Core for AI-driven enterprise workflows
+- Implemented SAP Document Extraction service for intelligent document processing
+- Built AI-powered automation prototypes and proof-of-concepts
+- Integrated SAP services with enterprise systems using BTP Destinations
 Tech: SAP BTP, CAPM, Node.js, Cloud Foundry, CDS, OData, SAP AI Core, Document Extraction, SAP HANA Cloud, PostgreSQL, SAP Launchpad, SAP UI5, SAP Fiori, BTP Destinations
 
 ## Enterprise AI Insurance Automation Platform | Innovon.AI Technologies
 Duration: Feb 2025 – July 2025
+Length: 6 months
 Description: Developed a scalable AI-powered automation platform for insurance workflows including email processing, document classification, and conversational AI.
 Contributions:
 - Built a multi-agent AI system to automate insurance email workflows
@@ -160,7 +178,8 @@ Contributions:
 Tech: ReactJS, Django REST, LangGraph, LangChain, OpenAI, Groq, Gemini, MongoDB, Redis, Microsoft Graph API, Azure, Ubuntu VPS
 
 ## AI-Driven Insurance Processing Platform | Innovon.AI Technologies
-Duration: 2023 – 2025
+Duration: Aug 2023 – Jan 2025
+Length: 18 months
 Description: Developed an AI-driven platform for automating insurance claims processing, document validation, and quote generation using large language models and NLP pipelines.
 Contributions:
 - Built AI-powered document processing pipelines for claims and validation
